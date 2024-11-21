@@ -1,3 +1,4 @@
+//dependencias
 import './App.css';
 import { HeaderTask } from './components/HeaderTask';
 import { TaskList } from './components/TaskList';

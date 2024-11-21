@@ -1,22 +1,33 @@
+//dependencias
 import { useId } from "react"
 import { useHeaderTask } from '../hooks/useHeaderTask';
 
+//componente del header
 export function HeaderTask(){
-  const taskId = useId()
+  const taskId = useId() 
   const { task, onSubmitTask, onChangeTask } = useHeaderTask()
 
   return (
-    <header>
-      <h1>TASKS'S APP</h1>
-      <form onSubmit={onSubmitTask}>
-        <label htmlFor={taskId}>Task: </label>
+    <header className="header-app">
+      <h1 className="head">TASKS'S APP</h1>
+      <form 
+        onSubmit={onSubmitTask}
+        className="header-form"
+      >
+        <label 
+          htmlFor={taskId}
+          className="header-label-form"
+        >
+          Task: 
+        </label>
         <input 
           id={taskId} 
           placeholder="TASK..."
           value={task}
           onChange={onChangeTask}
+          className="header-input"
         />
-        <button type="submit">Create Task</button>
+        <button className="create-task-button">Create Task</button>
       </form>
     </header>
   )

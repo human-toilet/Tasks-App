@@ -1,7 +1,9 @@
+//dependencias
 import { useTask } from "./useTask"
 import { useState } from "react"
 import { getId } from "../utils"
 
+//custom hook para manejar el formulario del header
 export function useHeaderTask(){
   const { submitTask } = useTask()
   const [task, setTask] = useState('')
@@ -16,7 +18,8 @@ export function useHeaderTask(){
 
     submitTask({
       value: task,
-      id
+      id,
+      completed: false
     })}
 
   return {
