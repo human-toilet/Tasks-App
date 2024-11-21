@@ -10,4 +10,4 @@ Lista de Tareas (Todo List):
 
     • La lista de tareas debe mostrarse en la interfaz.
 
-    • Cada tarea debe tener un título y un estado (completada o no completada).# Tasks-App
+    • Cada tarea debe tener un título y un estado (completada o no completada).
