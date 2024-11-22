@@ -18,7 +18,7 @@ export function TaskList(){
               <p className="task-name">{task.value}</p>
               <div className="task-handle">
                 <div className="check-handle">
-                  <label className="task-label-check">{task.completed ? 'completed: ' : 'not completed'}</label>
+                  <label className="task-label-check">{task.completed ? 'completed' : 'not completed'}</label>
                   <input
                     type="checkbox"
                     onChange={() => checkTask(task.id)}
