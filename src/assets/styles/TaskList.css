@@ -10,7 +10,6 @@
   justify-content: center;
   flex-direction: column;
   width: 80%;
-  gap: 5px;
 }
 
 .task{
@@ -62,6 +61,7 @@
 
 .task-delete-button{
   cursor: pointer;
+  border: 1px solid chocolate;
 }
 
 .task-delete-button:hover{
