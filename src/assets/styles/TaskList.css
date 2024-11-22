@@ -1,0 +1,72 @@
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  gap: 5px;
+}
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color:bisque;
+  user-select: none;
+  border: 1px solid chocolate;
+}
+
+.task-name{
+  color: black;
+  font-weight: bold;
+}
+
+.task-handle{
+  display: flex;
+  justify-content: flex-end;
+  width: 25%;
+}
+
+.check-handle{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: white;
+}
+
+.task-completed .check-handle{
+  background-color: green;
+  border: 3px solid darkgreen;
+}
+
+.not-task-completed .check-handle{
+  background-color: red;
+  border: 3px solid darkred;
+}
+
+.task-label-check{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-delete-button{
+  cursor: pointer;
+}
+
+.task-delete-button:hover{
+  background-color: black;
+  color: white;
+}
+
+
+

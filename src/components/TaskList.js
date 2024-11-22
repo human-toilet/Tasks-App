@@ -1,43 +1,38 @@
 //dependencias
-import { useId } from "react";
-import { useTask } from "../hooks/useTask";
+import { useTask } from "../hooks/useTask"
+import '../assets/styles/TaskList.css'
 
 //componente para manejar la lista de tareas
 export function TaskList(){
   const { tasks } = useTask()
   const { deleteTask, checkTask } = useTask() 
-  const taskId = useId()
 
   return (
-    <main>
+    <main className="content">
       <ul className="task-list">
-        {tasks.map((task, index) => (
+        {tasks.map((task) => (
             <li 
               key={task.id}
-              className='task'  
+              className={`task ${task.completed ? 'task-completed' : 'not-task-completed'}`}  
             >
-              <span className="task-name">{task.value}</span>
-              <div className={task.completed ? 'task-completed' : 'not-task-completed'}>
-              <label 
-                htmlFor={taskId}
-                className="task-label-check"
-              >
-                {task.completed ? 'completed: ' : 'not completed'}
-              </label>
-              <input
-                type="checkbox"
-                onChange={() => checkTask(index)}
-                checked={task.completed}
-                id={taskId}
-                className="task-input-check"
-              />
+              <p className="task-name">{task.value}</p>
+              <div className="task-handle">
+                <div className="check-handle">
+                  <label className="task-label-check">{task.completed ? 'completed: ' : 'not completed'}</label>
+                  <input
+                    type="checkbox"
+                    onChange={() => checkTask(task.id)}
+                    checked={task.completed}
+                    className="task-input-check"
+                  />
+                </div>
+                <button 
+                  onClick={() => deleteTask(task.id)}
+                  className="task-delete-button"
+                >
+                  delete
+                </button>
               </div>
-              <button 
-                onClick={() => deleteTask(task.id)}
-                className="task-delete-button"
-              >
-                delete
-              </button>
             </li>
           ))}
       </ul>

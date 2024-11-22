@@ -1,5 +1,5 @@
 //dependencias
-import { createContext, useState } from "react";
+import { createContext, useState } from "react"
 
 //contexto para manejar las tareas globalmente
 export const TaskContext = createContext()
@@ -19,8 +19,9 @@ export function TaskProvider ({ children }){
     setTasks([...tasks].filter((task) => task.id !== key))
   }
 
-  const checkTask = (index) => {
+  const checkTask = (key) => {
     const newTasks = [...tasks]
+    const index = tasks.findIndex((task) => task.id === key)
 
     newTasks[index] = {
       ...newTasks[index],

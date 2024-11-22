@@ -1,6 +1,7 @@
 //dependencias
 import { useId } from "react"
-import { useHeaderTask } from '../hooks/useHeaderTask';
+import { useHeaderTask } from '../hooks/useHeaderTask'
+import '../assets/styles/HeaderTask.css'
 
 //componente del header
 export function HeaderTask(){
@@ -20,14 +21,16 @@ export function HeaderTask(){
         >
           Task: 
         </label>
-        <input 
-          id={taskId} 
-          placeholder="TASK..."
-          value={task}
-          onChange={onChangeTask}
-          className="header-input"
-        />
-        <button className="create-task-button">Create Task</button>
+        <div className="header-input-button">
+          <input 
+            id={taskId} 
+            placeholder="Ingress a task..."
+            value={task}
+            onChange={onChangeTask}
+            className="header-input"
+          />
+          <button className="create-task-button">Create Task</button>
+        </div>
       </form>
     </header>
   )

@@ -7,8 +7,10 @@ import { TaskProvider } from './context/task';
 export function App() {
   return (
     <TaskProvider>
-      <HeaderTask />
-      <TaskList />
+      <div className='app'>
+        <HeaderTask />
+        <TaskList />
+      </div>
     </TaskProvider>
   );
 }
